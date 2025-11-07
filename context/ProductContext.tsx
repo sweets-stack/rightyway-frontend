@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+﻿import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { API_BASE_URL } from '../constants';
 import { Product, BackendProduct } from '../types';
 
 interface ProductContextType {
@@ -11,8 +12,6 @@ interface ProductContextType {
 }
 
 const ProductContext = createContext<ProductContextType | undefined>(undefined);
-
-const API_URL = 'http://localhost:5000/api';
 
 export const ProductProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -39,7 +38,7 @@ export const ProductProvider: React.FC<{ children: ReactNode }> = ({ children })
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch(`${API_URL}/products`);
+      const response = await fetch(`${API_BASE_URL}/products`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch products');

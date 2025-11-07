@@ -1,6 +1,9 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
+import { API_BASE_URL } from '../constants';
 import Meta from '../components/seo/Meta';
+import { API_BASE_URL } from '../constants';
 import Button from '../components/ui/Button';
+import { API_BASE_URL } from '../constants';
 
 interface TrackingInfo {
   orderNumber: string;

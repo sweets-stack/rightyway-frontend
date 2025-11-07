@@ -1,4 +1,5 @@
-import React, { createContext, useContext, ReactNode, useEffect, useState } from 'react';
+﻿import React, { createContext, useContext, ReactNode, useEffect, useState } from 'react';
+import { API_BASE_URL } from '../constants';
 import useLocalStorage from '../hooks/useLocalStorage';
 
 interface User {
@@ -31,7 +32,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       }
 
       try {
-        const response = await fetch('http://localhost:5000/api/auth/verify', {
+        const response = await fetch('${API_BASE_URL}/auth/verify', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

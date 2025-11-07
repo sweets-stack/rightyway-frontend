@@ -1,4 +1,7 @@
-﻿// Application Constants
+// API Configuration
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+// Application Constants
 export const BRAND_NAME = 'Rightyway Aso-Oke Fabrics LTD.';
 export const CONTACT_EMAIL = 'support@rightywayasooke.com';
 export const ADDRESS = 'Lagos, Nigeria';
