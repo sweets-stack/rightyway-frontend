@@ -1,4 +1,4 @@
-﻿import React, { createContext, useContext, ReactNode, useEffect, useState } from 'react';
+import React, { createContext, useContext, ReactNode, useEffect, useState } from 'react';
 import { API_BASE_URL } from '../constants';
 import useLocalStorage from '../hooks/useLocalStorage';
 
@@ -32,12 +32,12 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       }
 
       try {
-        const response = await fetch('${API_BASE_URL}/auth/verify', {
+        // FIXED: Use backticks for template literal
+        const response = await fetch(`${API_BASE_URL}/auth/verify`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
         });
-
 
         const contentType = response.headers.get('content-type');
         if (!contentType || !contentType.includes('application/json')) {
