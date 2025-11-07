@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Railway Backend</title>
+</head>
+<body>
+    <h1>Test Login to Railway Backend</h1>
+    <button onclick="testLogin()">Test Login</button>
+    <pre id="result"></pre>
+    
+    <script>
+    async function testLogin() {
+        const result = document.getElementById('result');
+        result.textContent = 'Testing...';
+        
+        try {
+            const response = await fetch('https://rightyway-backend-production.up.railway.app/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username: 'admin',
+                    password: 'Admin@2024!'
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok) {
+                result.textContent = '✅ SUCCESS!\n\n' + JSON.stringify(data, null, 2);
+                result.style.color = 'green';
+            } else {
+                result.textContent = '❌ FAILED!\n\n' + JSON.stringify(data, null, 2);
+                result.style.color = 'red';
+            }
+        } catch (error) {
+            result.textContent = '❌ ERROR!\n\n' + error.message;
+            result.style.color = 'red';
+        }
+    }
+    </script>
+</body>
+</html>
