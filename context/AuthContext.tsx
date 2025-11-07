@@ -38,6 +38,16 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
           },
         });
 
+
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          // Backend returned HTML instead of JSON - endpoint doesn't exist
+          localStorage.removeItem('token');
+          setUser(null);
+          setLoading(false);
+          return;
+        }
+
         if (response.ok) {
           const data = await response.json();
           // Token is valid, user remains logged in
