@@ -1,0 +1,272 @@
+├── .env
+├── .env
+├── .env.example
+├── .env.example
+├── .env.local
+├── .env.local
+├── .env.production
+├── .env.production
+├── .gitignore
+├── .gitignore
+├── App.tsx
+├── App.tsx
+├── [backend]
+├── [backend]
+│   ├── .env
+│   ├── .env
+│   ├── .env.example
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── package-lock.json
+│   ├── README.md
+│   ├── README.md
+│   ├── [scripts]
+│   ├── [scripts]
+│   │   ├── seedAdmin.js
+│   │   ├── seedAdmin.js
+│   ├── server.js
+│   ├── server.js
+│   ├── [uploads]
+│   ├── [uploads]
+├── [components]
+├── [components]
+│   ├── [cart]
+│   ├── [cart]
+│   │   ├── CartDrawer.tsx
+│   │   ├── CartDrawer.tsx
+│   │   ├── CartIcon.tsx
+│   │   ├── CartIcon.tsx
+│   ├── [checkout]
+│   ├── [checkout]
+│   │   ├── CustomerDetails.tsx
+│   │   ├── CustomerDetails.tsx
+│   │   ├── EmailLookup.tsx
+│   │   ├── EmailLookup.tsx
+│   ├── [layout]
+│   ├── [layout]
+│   │   ├── Footer.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── Header.tsx
+│   ├── [products]
+│   ├── [products]
+│   │   ├── ProductCard.tsx
+│   │   ├── ProductCard.tsx
+│   │   ├── ProductFilter.tsx
+│   │   ├── ProductFilter.tsx        
+│   │   ├── ProductGrid.tsx
+│   │   ├── ProductGrid.tsx
+│   ├── [seo]
+│   ├── [seo]
+│   │   ├── JsonLd.tsx
+│   │   ├── JsonLd.tsx
+│   │   ├── Meta.tsx
+│   │   ├── Meta.tsx
+│   ├── [ui]
+│   ├── [ui]
+│   │   ├── BackButton.tsx
+│   │   ├── BackButton.tsx
+│   │   ├── Button.tsx
+│   │   ├── Button.tsx
+│   │   ├── CookieBanner.tsx
+│   │   ├── CookieBanner.tsx
+├── constants.ts
+├── constants.ts
+├── [context]
+├── [context]
+│   ├── AuthContext.tsx
+│   ├── AuthContext.tsx
+│   ├── CartContext.tsx
+│   ├── CartContext.tsx
+│   ├── ProductContext.tsx
+│   ├── ProductContext.tsx
+├── [data]
+├── [data]
+│   ├── products.json
+│   ├── products.json
+├── deploy-plan.md
+├── deploy-plan.md
+├── [hooks]
+├── [hooks]
+│   ├── useLocalStorage.ts
+│   ├── useLocalStorage.ts
+├── index.css
+├── index.css
+├── index.html
+├── index.html
+├── index.tsx
+├── index.tsx
+├── metadata.json
+├── metadata.json
+├── package.json
+├── package.json
+├── package-lock.json
+├── package-lock.json
+├── [pages]
+├── [pages]
+│   ├── AboutPage.tsx
+│   ├── AboutPage.tsx
+│   ├── AdminPage.tsx
+│   ├── AdminPage.tsx
+│   ├── ContactPage.tsx
+│   ├── ContactPage.tsx
+│   ├── HomePage.tsx
+│   ├── HomePage.tsx
+│   ├── NotFoundPage.tsx
+│   ├── NotFoundPage.tsx
+│   ├── PrivacyPage.tsx
+│   ├── PrivacyPage.tsx
+│   ├── ProductDetailPage.tsx        
+│   ├── ProductDetailPage.tsx
+│   ├── ShippingPage.tsx
+│   ├── ShippingPage.tsx
+│   ├── ShopPage.tsx
+│   ├── ShopPage.tsx
+│   ├── TermsPage.tsx
+│   ├── TermsPage.tsx
+│   ├── TrackingPage.tsx
+│   ├── TrackingPage.tsx
+│   ├── WholesalePage.tsx
+│   ├── WholesalePage.tsx
+├── pdf_fix.js
+├── pdf_fix.js
+├── postcss.config.js
+├── postcss.config.js
+├── project_structure.txt
+├── project_structure.txt
+├── [public]
+├── [public]
+│   ├── favicon.png
+│   ├── favicon.png
+│   ├── footer-logo.png
+│   ├── footer-logo.png
+│   ├── header-logo.png
+│   ├── header-logo.png
+│   ├── IMAGE1.png
+│   ├── IMAGE1.png
+│   ├── IMAGE2.png
+│   ├── IMAGE2.png
+│   ├── IMAGE3.png
+│   ├── IMAGE3.png
+│   ├── IMAGE4.png
+│   ├── IMAGE4.png
+│   ├── IMAGE5.png
+│   ├── IMAGE5.png
+│   ├── IMAGE6.png
+│   ├── IMAGE6.png
+│   ├── IMAGE7.png
+│   ├── IMAGE7.png
+├── README.md
+├── README.md
+├── tailwind.config.js
+├── tailwind.config.js
+├── test_pdf.js
+├── test_pdf.js
+├── tsconfig.json
+├── tsconfig.json
+├── types.ts
+├── types.ts
+├── vercel.json
+├── vercel.json
+├── verify_install.js
+├── verify_install.js
+├── verify_usage.js
+├── verify_usage.js
+├── vite.config.ts
+├── vite.config.ts
+
+Project structure saved to: C:\Users\jepha\Documents\rightyway-aso-oke\project_structure.txt
+
+Method 2: Quick tree view
+          |-- [backend]
+          |-- [components]
+          |-- [context]
+          |-- [data]
+          |-- [hooks]
+          |-- [pages]
+          |-- [public]
+          |-- .env
+          |-- .env.example
+          |-- .env.local
+          |-- .env.production        
+          |-- App.tsx
+          |-- constants.ts
+          |-- deploy-plan.md
+          |-- index.css
+          |-- index.html
+          |-- index.tsx
+          |-- metadata.json
+          |-- package-lock.json      
+          |-- package.json
+          |-- pdf_fix.js
+          |-- postcss.config.js      
+          |-- project_structure.txt  
+          |-- README.md
+          |-- tailwind.config.js
+          |-- test_pdf.js
+          |-- tsconfig.json
+          |-- types.ts
+          |-- vercel.json
+          |-- verify_install.js      
+          |-- verify_usage.js        
+          |-- vite.config.ts
+            |-- [scripts]
+            |-- [uploads]
+            |-- .env
+            |-- .env.example
+            |-- package-lock.json
+            |-- package.json
+            |-- README.md
+            |-- server.js
+              |-- seedAdmin.js
+            |-- [cart]
+            |-- [checkout]
+            |-- [layout]
+            |-- [products]
+            |-- [seo]
+            |-- [ui]
+              |-- CartDrawer.tsx     
+              |-- CartIcon.tsx       
+              |-- CustomerDetails.tsx
+              |-- EmailLookup.tsx    
+              |-- Footer.tsx
+              |-- Header.tsx
+              |-- ProductCard.tsx    
+              |-- ProductFilter.tsx  
+              |-- ProductGrid.tsx    
+              |-- JsonLd.tsx
+              |-- Meta.tsx
+              |-- BackButton.tsx     
+              |-- Button.tsx
+              |-- CookieBanner.tsx
+            |-- AuthContext.tsx      
+            |-- CartContext.tsx
+            |-- ProductContext.tsx   
+            |-- products.json        
+            |-- useLocalStorage.ts   
+            |-- AboutPage.tsx
+            |-- AdminPage.tsx        
+            |-- ContactPage.tsx      
+            |-- HomePage.tsx
+            |-- NotFoundPage.tsx     
+            |-- PrivacyPage.tsx      
+            |-- ProductDetailPage.tsx
+            |-- ShippingPage.tsx     
+            |-- ShopPage.tsx
+            |-- TermsPage.tsx        
+            |-- TrackingPage.tsx
+            |-- WholesalePage.tsx    
+            |-- favicon.png
+            |-- footer-logo.png      
+            |-- header-logo.png      
+            |-- IMAGE1.png
+            |-- IMAGE2.png
+            |-- IMAGE3.png
+            |-- IMAGE4.png
+            |-- IMAGE5.png
+            |-- IMAGE6.png
+            |-- IMAGE7.png

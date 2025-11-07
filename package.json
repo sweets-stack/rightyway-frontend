@@ -1,0 +1,33 @@
+{
+    "name": "rightyway-aso-oke",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "jspdf": "^3.0.3",
+        "jspdf-autotable": "^5.0.2",
+        "react": "^19.2.0",
+        "react-dom": "^19.2.0",
+        "react-helmet-async": "^2.0.5",
+        "react-router-dom": "^7.9.5"
+    },
+    "devDependencies": {
+        "@types/node": "^22.14.0",
+        "@vitejs/plugin-react": "^5.0.0",
+        "autoprefixer": "^10.4.0",
+        "postcss": "^8.4.0",
+        "tailwindcss": "^3.4.0",
+        "typescript": "~5.8.2",
+        "vite": "^6.2.0"
+    },
+    "description": "This repository contains the complete, production-ready website project for **Rightyway Aso-Oke Fabrics LTD.**, a Nigerian Aso-Oke fashion brand. The application is built as a Single Page Application (SPA) using React, TypeScript, and Tailwind CSS.",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
