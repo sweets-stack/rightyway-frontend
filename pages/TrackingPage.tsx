@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { API_BASE_URL } from '../constants';
 import Meta from '../components/seo/Meta';
-import { API_BASE_URL } from '../constants';
 import Button from '../components/ui/Button';
-import { API_BASE_URL } from '../constants';
 
 interface TrackingInfo {
   orderNumber: string;
@@ -33,8 +31,7 @@ const TrackingPage: React.FC = () => {
     setError('');
 
     try {
-      const response = await fetch(`http://localhost:5000/api/track/${trackingNumber}`);
-      
+const response = await fetch(`${API_BASE_URL}/track/${trackingNumber}`);      
       if (response.ok) {
         const data = await response.json();
         setTrackingInfo(data);
