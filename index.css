@@ -3,3 +3,11 @@
 @tailwind utilities;
 
 /* Your custom styles below */
+.naira::before {
+  content: "₦";
+}
+
+/* Ensure proper font support */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { Product } from '../../types';
 import { useCart } from '../../context/CartContext';
@@ -11,8 +11,13 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { addToCart } = useCart();
   
-  // FIXED: Pass product.price_ngn instead of ₦
-  const formattedPrice = new Intl.NumberFormat('en-NG', { style: 'currency', currency: 'NGN' }).format(product.price_ngn);
+  // FIXED: Proper Naira formatting
+  const formattedPrice = new Intl.NumberFormat('en-NG', { 
+    style: 'currency', 
+    currency: 'NGN',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  }).format(product.price_ngn);
 
   const handleAddToCart = () => {
     addToCart(product, 1);
@@ -20,7 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg">
-      <Link to={`/product/${product.id}`} className="block">
+      <Link to={/product/ + product.id} className="block">
         <div className="aspect-w-3 aspect-h-4 bg-gray-200 sm:aspect-none sm:h-80">
           <img
             src={product.images[0]}
@@ -31,7 +36,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </Link>
       <div className="flex flex-1 flex-col space-y-2 p-4">
         <h3 className="text-lg font-medium text-brand-slate">
-          <Link to={`/product/${product.id}`}>
+          <Link to={/product/ + product.id}>
             <span aria-hidden="true" className="absolute inset-0" />
             {product.name}
           </Link>

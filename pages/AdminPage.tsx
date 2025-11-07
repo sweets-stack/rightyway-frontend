@@ -819,15 +819,15 @@ alert('Order status updated successfully!');
           doc.setFontSize(11);
           doc.setTextColor(0, 0, 0);
           doc.text(`Total Orders: ${response.summary.totalOrders}`, 15, 85);
-          doc.text(`Total Revenue: â‚¦${response.summary.totalRevenue.toLocaleString()}`, 15, 92);
-          doc.text(`Average Order Value: â‚¦${response.summary.averageOrderValue.toLocaleString()}`, 15, 99);
+          doc.text(`Total Revenue: ₦${response.summary.totalRevenue.toLocaleString()}`, 15, 92);
+          doc.text(`Average Order Value: ₦${response.summary.averageOrderValue.toLocaleString()}`, 15, 99);
           
           const tableData = response.orders.map((order: any) => [
             order.orderNumber,
             new Date(order.createdAt).toLocaleDateString(),
             order.customer.name,
             order.status,
-            `â‚¦${order.total.toLocaleString()}`
+            `₦${order.total.toLocaleString()}`
           ]);
           
           // FIXED: Use autoTable function with doc parameter
@@ -893,15 +893,15 @@ alert('Order status updated successfully!');
       doc.setFontSize(10);
       doc.setTextColor(0, 0, 0);
       doc.text(`Total Orders: ${response.summary.totalOrders}`, 15, 70);
-      doc.text(`Total Revenue: â‚¦${response.summary.totalRevenue.toLocaleString()}`, 15, 77);
-      doc.text(`Average Order Value: â‚¦${response.summary.averageOrderValue.toLocaleString()}`, 15, 84);
+      doc.text(`Total Revenue: ₦${response.summary.totalRevenue.toLocaleString()}`, 15, 77);
+      doc.text(`Average Order Value: ₦${response.summary.averageOrderValue.toLocaleString()}`, 15, 84);
       
       const tableData = response.orders.map((order: any) => [
         order.orderNumber,
         new Date(order.createdAt).toLocaleDateString(),
         order.customer.name,
         order.status,
-        `â‚¦${order.total.toLocaleString()}`
+        `₦${order.total.toLocaleString()}`
       ]);
       
       // FIXED: Use autoTable function with doc parameter
@@ -1112,7 +1112,7 @@ for (let i = 1; i <= pageCount; i++) {
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Total Revenue</h3>
                   <p className="text-3xl font-bold text-brand-maroon">
-                    â‚¦{(orderStats?.totalRevenue || 0).toLocaleString()}
+                    ₦{(orderStats?.totalRevenue || 0).toLocaleString()}
                   </p>
                 </div>
               </div>
@@ -1135,7 +1135,7 @@ for (let i = 1; i <= pageCount; i++) {
                         <p className="text-sm text-gray-600">{order.customer.name}</p>
                       </div>
                       <div className="text-right">
-                        <p className="font-medium text-gray-900">â‚¦{order.total.toLocaleString()}</p>
+                        <p className="font-medium text-gray-900">₦{order.total.toLocaleString()}</p>
                         <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(order.status)}`}>
                           {order.status}
                         </span>
@@ -1221,7 +1221,7 @@ for (let i = 1; i <= pageCount; i++) {
                           {product.category}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          â‚¦{(product.price_ngn || product.price).toLocaleString()}
+                          ₦{(product.price_ngn || product.price).toLocaleString()}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                           {product.stock || 0}
@@ -1346,7 +1346,7 @@ for (let i = 1; i <= pageCount; i++) {
                                   </div>
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                  â‚¦{order.total.toLocaleString()}
+                                  ₦{order.total.toLocaleString()}
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap">
                                   <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(order.status)}`}>
@@ -1392,7 +1392,7 @@ for (let i = 1; i <= pageCount; i++) {
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Total Revenue</h3>
                   <p className="text-3xl font-bold text-brand-maroon">
-                    â‚¦{(orderStats?.totalRevenue || 0).toLocaleString()}
+                    ₦{(orderStats?.totalRevenue || 0).toLocaleString()}
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm border">
@@ -1428,19 +1428,19 @@ for (let i = 1; i <= pageCount; i++) {
                         <div 
                           className="w-full bg-brand-maroon rounded-t transition-all duration-500 hover:bg-brand-gold cursor-pointer"
                           style={{ height: `${height}px`, minHeight: data.revenue > 0 ? '10px' : '0' }}
-                          title={`â‚¦${data.revenue.toLocaleString()}`}
+                          title={`₦${data.revenue.toLocaleString()}`}
                         >
                           {/* Tooltip */}
                           <div className="invisible group-hover:visible absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded whitespace-nowrap z-10">
                             <div className="font-semibold">{data.month}</div>
-                            <div>Revenue: â‚¦{data.revenue.toLocaleString()}</div>
+                            <div>Revenue: ₦{data.revenue.toLocaleString()}</div>
                             <div>Orders: {data.orders}</div>
                             <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
                           </div>
                         </div>
                         <div className="text-xs text-gray-600 mt-2 font-medium">{data.month}</div>
                         <div className="text-xs text-gray-500">
-                          {data.revenue > 0 ? `â‚¦${(data.revenue / 1000).toFixed(0)}K` : 'â‚¦0'}
+                          {data.revenue > 0 ? `₦${(data.revenue / 1000).toFixed(0)}K` : '₦0'}
                         </div>
                         <div className="text-xs text-gray-400">{data.orders} orders</div>
                       </div>
@@ -1478,7 +1478,7 @@ for (let i = 1; i <= pageCount; i++) {
                         </div>
                       </div>
                       <div className="text-right">
-                        <p className="font-medium text-gray-900">â‚¦{(product.price_ngn || product.price).toLocaleString()}</p>
+                        <p className="font-medium text-gray-900">₦{(product.price_ngn || product.price).toLocaleString()}</p>
                         <p className="text-sm text-gray-500">Stock: {product.stock || 0}</p>
                       </div>
                     </div>
@@ -1529,7 +1529,7 @@ for (let i = 1; i <= pageCount; i++) {
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Price (â‚¦) *
+                          Price (₦) *
                         </label>
                         <input
                           type="number"
@@ -1880,7 +1880,7 @@ for (let i = 1; i <= pageCount; i++) {
                                 <option value="">-- Manual Entry (Custom Product) --</option>
                                 {products.filter(p => p.stock > 0).map((product) => (
                                   <option key={product._id || product.id} value={product._id || product.id}>
-                                    {product.name} - â‚¦{(product.price_ngn || product.price).toLocaleString()} (Stock: {product.stock})
+                                    {product.name} - ₦{(product.price_ngn || product.price).toLocaleString()} (Stock: {product.stock})
                                   </option>
                                 ))}
                               </select>
@@ -1904,7 +1904,7 @@ for (let i = 1; i <= pageCount; i++) {
                             {/* Price */}
                             <div>
                               <label className="block text-sm font-medium text-gray-700 mb-2">
-                                Price (â‚¦) *
+                                Price (₦) *
                               </label>
                               <input
                                 type="number"
@@ -1984,7 +1984,7 @@ for (let i = 1; i <= pageCount; i++) {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Shipping Fee (â‚¦)
+                          Shipping Fee (₦)
                         </label>
                         <input
                           type="number"
